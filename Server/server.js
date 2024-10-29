@@ -73,14 +73,4 @@ server.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-// Optional: Main function to log data to the console periodically
-const mainStart = async () => {
-  while (true) {
-    const stockData = await fetchWithUpdatedCookie();
-    console.log(stockData);
-    await new Promise(r => setTimeout(r, 10000)); // Delay between fetches
-  }
-};
 
-// Uncomment this if you want to log data to the console
-// mainStart();
