@@ -27,16 +27,20 @@ const StockCards = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      {stockData.map((stock) => (
-        <Card
-          key={stock.symbol}
-          symbol={stock.symbol}
-          issuePrice={stock.iep}
-          change={stock.change}
-          perChange={stock.perChange}
-          totalQty={stock.ieq}
-        />
-      ))}
+      {stockData.length === 0 ? (
+        <div>Loading...</div>
+      ) : (
+        stockData?.map((stock) => (
+          <Card
+            key={stock.symbol}
+            symbol={stock.symbol}
+            issuePrice={stock.iep}
+            change={stock.change}
+            perChange={stock.perChange}
+            totalQty={stock.ieq}
+          />
+        ))
+      )}
     </div>
   );
 };

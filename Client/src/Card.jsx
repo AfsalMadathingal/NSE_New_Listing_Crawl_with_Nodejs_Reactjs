@@ -11,6 +11,8 @@ const Card = ({ symbol, issuePrice, change, perChange, totalQty }) => {
       className="p-4 border rounded-md bg-white"
     >
       <div className="text-lg font-semibold">{symbol}</div>
+      <div className="h-3 w-3 rounded-full bg-red-500 animate-pulse mt-2"></div>
+      LIVE
       <div className="flex justify-between mt-4">
         <div>
           <p className="text-gray-500">Issue Price</p>
